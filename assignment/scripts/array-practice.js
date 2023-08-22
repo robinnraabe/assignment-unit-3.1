@@ -10,6 +10,8 @@ console.log('Animals are: ', animalArray);
 // 1. TODO: Make an array `favoriteFoods` with some favorite foods
 //    Console log your array of foods to the console with a message, 
 //    similar to the example above
+var favoriteFoods = ['sushi', 'curry', 'tacos', 'salad'];
+console.log('My favorite foods are: ', favoriteFoods);
 
 
 // Array.length - tells you how many items are in the array
@@ -21,6 +23,8 @@ console.log('Number of animals:', numberOfAnimals);
 
 // 2. TODO: Create a variable `numberOfFoods`
 //    Console log to the console the number of foods
+var numberOfFoods = favoriteFoods.length;
+console.log(numberOfFoods);
 
 
 // Accessing array items
@@ -32,15 +36,18 @@ console.log('First animal is', firstAnimal);
 
 // 3.a. TODO: Create a variable `secondAnimal`
 //      Console log the second animal in the array 
-
+var secondAnimal = animalArray[1];
+console.log('Second animal is', secondAnimal);
 
 // 3.b. TODO: Create a variable `lastAnimal`
 //      Console log the last animal in the array using it's array index 
-
+var lastAnimal = animalArray[3];
+console.log('Last animal is', lastAnimal);
 
 // 3.c. (STRETCH) TODO: Update 3.b to use the array length, 
 //      instead of the exact index number of the last item.
-
+var lastAnimal = animalArray[animalArray.length-1];
+console.log(lastAnimal);
 
 
 // Adding & Removing Array Items
@@ -53,6 +60,9 @@ console.log('Added an animal to end,', animalArray);
 
 // 4.a. TODO: Create a variable `dessert` and assign it to a new food.
 //      Add the `dessert` at the end of your array & log the array
+var dessert = 'ice cream';
+favoriteFoods.push(dessert);
+console.log(favoriteFoods);
 
 
 // Example: Add an animal to the beginning using Array.unshift
@@ -62,7 +72,9 @@ console.log(`Added an animal to beginning: ${animalArray}`);
 
 // 4.b. TODO: Create a variable `entree` and assign it to a new food.
 //      Add the `entree` at the beginning of the array & log the array
-
+var entree = 'pasta';
+favoriteFoods.unshift(entree);
+console.log(favoriteFoods);
 
 // Example: Remove the last animal by using Array.pop
 let removedAnimal = animalArray.pop();
@@ -75,6 +87,8 @@ let colors = ['orange', 'yellow', 'green', 'teal'];
 // 4.c. TODO: Create a variable `lastColor`. Remove the color 
 //      at the end of your array & assign it to `lastColor`.
 //      Console log both the color removed and the updated array.
+var lastColor = colors.pop();
+console.log(lastColor, colors);
 
 
 // Example: Remove the first color using Array.shift
@@ -85,7 +99,8 @@ console.log('The animals are now', animalArray);
 // 4.d. TODO: Create a variable `firstColor`. Remove the color 
 //      at the beginning of your array & assign it to `firstColor`.
 //      Console log both the color removed and the updated array.
-
+var firstColor = colors.shift();
+console.log(firstColor, colors);
 
 // STRETCH GOALS:
 
@@ -93,17 +108,25 @@ let gems = ['Topaz', 'Citrine', 'Diamond', 'Emerald', 'Iolite', 'Tanzanite'];
 
 // 5.a (STRETCH) TODO: Replace the second gem with 'Tourmaline'
 //      Console log the updated array.
+gems[1] = 'Tourmaline';
+console.log(gems);
 
 
 // 5.b (STRETCH) TODO: Sort your gems array
 //     in reverse alphabetical order.
 //     Console log the array.
+gems.sort();
+gems.reverse();
+console.log(gems);
 
 
 // 5.c (STRETCH) TODO: Create a variable `gemString` and
 //     put the word "and" between each item. Research `.join()`.
 //     eg "Tourmaline and Topaz and Tanzanite and Iolite and Emerald and Diamond".
 //     Console log the string.
+var gemString;
+gemString = gems.join(' and ');
+console.log(gemString);
 
 
 // 5.d (STRETCH) TODO: Make a new array `colorfulGems` that combines 
@@ -111,7 +134,8 @@ let gems = ['Topaz', 'Citrine', 'Diamond', 'Emerald', 'Iolite', 'Tanzanite'];
 //     Console log the new array.
 //     It should look something like:
 //     ['Tourmaline', 'Topaz', 'Tanzanite', 'Iolite', 'Emerald', 'Diamond', 'yellow', 'green']
-
+var colorfulGems = gems.concat(colors);
+console.log(colorfulGems);
 
 
 
